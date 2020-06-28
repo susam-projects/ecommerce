@@ -1,7 +1,7 @@
 {
-  "name": "@susam/storefront",
+  "name": "@susam/reactstorefront",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "",
   "homepage": "",
   "author": "Susam",
@@ -13,7 +13,6 @@
     "build": "next build",
     "test": "jest",
     "deploy": "npm run build && xdn deploy",
-    "rsf:link": "yalc add react-storefront",
     "prettier": "prettier --write \"**/*.js\" \"!{node_modules,.next,.yalc}/**\""
   },
   "husky": {
@@ -51,7 +50,6 @@
   },
   "lint-staged": {
     "*.js": [
-      "yalc remove --all",
       "npm run prettier",
       "git add"
     ]
