@@ -1,0 +1,25 @@
+{
+  "name": "vendure",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Susam",
+  "homepage": "https://github.com/susam-projects/ecommerce#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susam-projects/ecommerce.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/susam-projects/ecommerce/issues"
+  }
+}
