@@ -1,11 +1,11 @@
 {
-  "name": "react-storefront-starter-app",
+  "name": "@susam/storefront",
   "version": "1.0.0",
   "private": true,
   "description": "",
   "homepage": "",
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "Susam",
+  "license": "MIT",
   "scripts": {
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development nodemon server.js",
