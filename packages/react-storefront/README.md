@@ -1,11 +1,18 @@
-# `react-storefront`
+# react-storefront-starter-app
 
-> TODO: description
+Starter Next.js app for React Storefront 7+
 
-## Usage
+# Development
 
 ```
-const reactStorefront = require('react-storefront');
+npm i
+npm run dev
+```
 
-// TODO: DEMONSTRATE API
+# Production
+
+You can get a better sense of the speed of React Storefront by running a production build:
+
+```
+npm run build && npm run prod
 ```

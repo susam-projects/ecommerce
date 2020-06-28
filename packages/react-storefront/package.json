@@ -1,26 +1,59 @@
 {
-  "name": "react-storefront",
+  "name": "react-storefront-starter-app",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "Susam <susam.buildings@gmail.com>",
-  "homepage": "https://github.com/susam-projects/ecommerce#readme",
-  "license": "ISC",
-  "main": "src/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/susam-projects/ecommerce.git"
-  },
+  "private": true,
+  "description": "",
+  "homepage": "",
+  "author": "",
+  "license": "UNLICENSED",
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "prod": "cross-env NODE_ENV=production node server.js",
+    "build": "next build",
+    "test": "jest",
+    "deploy": "npm run build && xdn deploy",
+    "rsf:link": "yalc add react-storefront",
+    "prettier": "prettier --write \"**/*.js\" \"!{node_modules,.next,.yalc}/**\""
   },
-  "bugs": {
-    "url": "https://github.com/susam-projects/ecommerce/issues"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@material-ui/core": "4.5.2",
+    "@material-ui/icons": "4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.35",
+    "@material-ui/styles": "4.5.2",
+    "@svgr/webpack": "^4.3.3",
+    "clsx": "^1.0.4",
+    "cross-env": "^5.2.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "lorem-ipsum": "^2.0.3",
+    "module-alias": "^2.2.1",
+    "next": "^9.3.6",
+    "preact": "10.1.0",
+    "preact-render-to-string": "^5.1.2",
+    "preact-ssr-prepass": "^1.0.0",
+    "qs": "^6.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-storefront": "^8.11.0",
+    "react-visibility-sensor": "^5.1.1",
+    "webpack-clear-require-cache-plugin": "0.0.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-imports": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yalc remove --all",
+      "npm run prettier",
+      "git add"
+    ]
   }
 }
