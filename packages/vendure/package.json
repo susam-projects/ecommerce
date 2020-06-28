@@ -1,25 +1,29 @@
 {
   "name": "@susam/vendure",
-  "version": "1.0.0",
-  "description": "",
-  "author": "Susam",
-  "homepage": "https://github.com/susam-projects/ecommerce#readme",
-  "license": "ISC",
-  "main": "src/index.js",
-  "directories": {
-    "src": "src"
-  },
-  "files": [
-    "src"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/susam-projects/ecommerce.git"
-  },
+  "version": "0.1.0",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "run:server": "ts-node ./src/index.ts",
+    "run:worker": "ts-node ./src/index-worker.ts",
+    "start": "concurrently yarn:run:*",
+    "build": "tsc",
+    "migration:generate": "ts-node migration generate",
+    "migration:run": "ts-node migration run",
+    "migration:revert": "ts-node migration revert"
   },
-  "bugs": {
-    "url": "https://github.com/susam-projects/ecommerce/issues"
+  "resolutions": {
+    "tslib": "1.11.2"
+  },
+  "dependencies": {
+    "@vendure/admin-ui-plugin": "0.13.0",
+    "@vendure/asset-server-plugin": "0.13.0",
+    "@vendure/core": "0.13.0",
+    "@vendure/email-plugin": "0.13.0",
+    "sqlite3": "4.2.0",
+    "typescript": "3.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "5.2.0",
+    "ts-node": "8.10.2"
   }
 }
